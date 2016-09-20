@@ -15,11 +15,12 @@ $(document).ready(function() {
             beforeSend: function(){
                 $("#message").html("Loading Information");
             },
-            success: function load(data) {
+            success: function(data) {
                 if (data.Response == "False") {
                     $("#message").html(searchTerm + " was not found. Please try again.");
                 } else {
                     $("#message").html(data.Title);
+                    $("<img>").attr("src", data.Poster).attr("id", "poster").appendTo('#toClear');
                     $("<p>").html(data.Title + " was a " + data.Type + " directed by " + data.Director + " in " + data.Year + ". (Released on " + data.Released + ")").appendTo('#toClear');
                     $("<p>").html("Starring " + data.Actors + ", it's no wonder " + data.Title + " " + data.Awards).appendTo('#toClear');
                     var wikipedia = "https://en.wikipedia.org/wiki/"+data.Title;

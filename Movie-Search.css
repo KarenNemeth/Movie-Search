@@ -33,17 +33,36 @@ body {
     text-align: center;
     position: relative;
 }
-
 #results {
     width: 70%;
     word-wrap: normal;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 12%;
+    padding-top: 8%;
     padding-left: 15%;
+    padding-right: 15%;
     margin: 0;
+}
+#poster{
+    float: right;
+    clear: both;
+    width: 25%;
+    height: 50%;
+    margin-left: 5px;
+    height: auto;
+    position: relative;
+}
+#toClear{
+    margin-top: 5%;
+}
+#text{
+    float: left;
+    border: 2px solid yellow;
+    clear: both;
+    width: 50%;
+    position: relative;
+    height: 100%;
 }
 
 a {
